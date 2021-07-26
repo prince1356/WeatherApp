@@ -1,7 +1,7 @@
 const urllib = require('urllib');
 
 const forecast = (latidude, longitude, callback) => {
-    const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + latidude + '&lon=' + longitude + '&appid=a712b4333f067dcfb8db975d9ea5ff73&units=imperial'
+    const url = 'api.openweathermap.org/data/2.5/weather?lat=' + latidude +'&lon='+ longitude +'&appid=a712b4333f067dcfb8db975d9ea5ff73&units=metric'
 
     urllib.request(url, (err, data, res) => {
         const nData = JSON.parse(data);
@@ -13,9 +13,10 @@ const forecast = (latidude, longitude, callback) => {
             callback('wrong location', undefined)
         }
         else {
-            callback(undefined, list[0].weather[0].description);
+            callback(undefined, nData.weather[0].description + ", it is currently " + nData.main.temp + " degree celsius.");
         }
     })
 }
 
 module.exports = forecast;
+

@@ -10,9 +10,29 @@
 
   <div class="main-content">
 
-    {{>header}}
-    <p>This site is created by Prince Sharma. It uses data from openWeather.in</p>
-    <img class="portrait" src="images/img.jpeg" alt="">
+      <header>
+        <div class="head-section">
+          <h1>About</h1>
+          <nav>
+            <a href="/">Weather</a>
+            <a href="/about">About</a>
+          </nav>
+        </div>
+      </header>
+
+      <section class="backend">
+    <div>
+    <p>This site is created by Prince Sharma. </p>
+    <p> It fetches geocoordinates from mapbox.com and fetches data from openWeather.in by sending geocoordinates there.</p>
+    </div>
+    <img class="portrait" src="images/img1.jpg" alt="">
+
+  <div class="text">
+  <p>You can also visit my chat app here.</p>
+  <a href="https://soul-chat-application.herokuapp.com/" target="_blank" class="chat-app">CHAT-APP</a>
+
+  </div>
+  </section>
   </div>
 
   {{>footer}}

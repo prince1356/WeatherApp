@@ -1,28 +1,47 @@
 <html lang="en">
 
-<head>
-  <link rel="icon" href="/images/weather.png">
-  <link rel="stylesheet" type="text/css" href="/css/styles.css">
-  <title>Weather</title>
-</head>
+  <head>
+    <link rel="icon" href="/images/weather.png" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <title>Weather</title>
+  </head>
 
-<body>
-  <div class="main-content">
-    {{>header}}
+  <body>
+    <div class="main-content">
+      <header>
+        <div class="head-section">
+          <h1>Weather</h1>
+          <nav>
+            <a href="/">Weather</a>
+            <a href="/about">About</a>
+          </nav>
+        </div>
+      </header>
 
-    <p>Use this site to get your weather</p>
+      <section class="backend">
+        <div class="text">
+        <img src="/images/sun.png" alt="cloud and sun">
+        <p>Enter the location below</p>
+        <img src="/images/sun.png" alt="cloud and sun">
+        </div>
 
-    <form action="">
-      <input type="text" placeholder="Location">
-      <button>Search</button>
-    </form>
+        <form action="">
+          <input type="text" placeholder="Location" />
+          <button>Search</button>
+        </form>
 
-    <p id="message-1"></p>
-    <p id="message-2"></p>
-  </div>
+      <div>
+        <p id="message-1"></p>
+        <p id="message-2"></p>
+      </div>
+      </section>
+    </div>
 
-  {{>footer}}
-  <script src="/js/app.js"></script>
-</body>
+    <footer>
+      <p>Created by {{name}}</p>
+    </footer>
+
+    <script src="/js/app.js"></script>
+  </body>
 
 </html>
